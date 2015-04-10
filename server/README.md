@@ -193,3 +193,14 @@ Date: Sun, 15 Sep 2013 18:11:39 GMT
   "status": 200
 }
 ```
+
+## Installasjon av Server
+```sh
+docker build -t twitter-mock source
+```
+
+Makefil for build og installasjon av systemd unit.
+```sh
+make              # bygger docker image registry.laat.io/twitter-mock
+sudo make install # kopierer systemd unitfil til /lib/systemd/system
+```
