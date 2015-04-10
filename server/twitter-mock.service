@@ -1,0 +1,14 @@
+[Unit]
+Description=Twitter Mock Server
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStartPre=-/usr/bin/docker kill twitter_mock
+ExecStartPre=-/usr/bin/docker rm twitter_mock
+ExecStart=/usr/bin/docker run --name twitter_mock -e VIRTUAL_HOST=twitter.lazy.wtf registry.laat.io/twitter-mock
+ExecStop=/usr/bin/docker kill twitter_mock
+
+[Install]
+WantedBy=multi-user.target
