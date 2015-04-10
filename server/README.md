@@ -1,10 +1,10 @@
 #Simple twitter api
 
-## Installing
-```
-$ mkvirtualenv angular-kurs # optional
-$ pip install -r requirements.txt  # legg til --user etter install om du ikke har root
-$ python api.py
+# POSTMAN collection
+
+Import collection url
+``` 
+https://www.getpostman.com/collections/d81392a44210336b6089
 ```
 
 ## Getting all tweets
