@@ -16,7 +16,7 @@ public class Main {
         InetSocketAddress inetSocketAddress = new InetSocketAddress(1337);
         HttpServer server = HttpServer.create(inetSocketAddress, 0);
         server.createContext("/", request -> {
-                String root = "klient";
+                String root = "klient/app";
                 URI uri = request.getRequestURI();
                 String path = uri.getPath();
                 if(path.equals("/")) {
