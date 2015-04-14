@@ -149,10 +149,10 @@ class UserCredentials(Resource):
 
         user = get_user(data['user']['username'])
         if user is None:
-            return jsonify(status=400, message="user does not exist")
+            return abort(400, {status: 400, message: "user does not exist"})
 
         if user.password != data['user']['password']:
-            return jsonify(status=403, message="incorrect password")
+            return abort(403, {status: 403, message: "incorrect password"})
 
         return jsonify(status=200), 200
 
